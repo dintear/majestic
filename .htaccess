@@ -1,0 +1,7 @@
+Options +ExecCGI
+
+AddHandler wsgi-script .py
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /majestic/config/wsgi-prod.py/$1 [QSA,PT,L]
