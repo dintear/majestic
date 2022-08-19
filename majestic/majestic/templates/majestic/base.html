@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <!-- for development process -->
+    <meta name="robots" content="noindex, nofollow" />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block meta_tags %}{% endblock %}
+
+    {% block page_heading %}
+    <title>Нижегородская вышивальная компания Majestic</title>
+    {% endblock %}
+
+    <link rel="shortcut icon" href="{% static 'logos/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'majestic/css/styles.min.css' %}">
+    {% block styles %}{% endblock %}
+
+</head>
+<body>
+    
+    <div class="body__wrapper body-wrapper">
+
+        <div class="body-wrapper__menu-btn menu-btn" id="menu-btn">
+            <div class="menu-btn__inner menu-btn-content">
+                <span class="menu-btn-content__line menu-btn-content__line--top"></span>
+                <span class="menu-btn-content__line menu-btn-content__line--center"></span>
+                <span class="menu-btn-content__line menu-btn-content__line--bottom"></span>
+            </div>
+        </div>
+        <!-- / end of menu button for small devices -->
+
+
+        <div class="body-wrapper__content body-content">
+
+            {% include 'majestic/components/header.html' %}
+            <!-- / end of header -->
+
+
+            <main class="body-content__main body-main">
+
+                {% if request.path != '/' %}
+                <section class="body-main__head page-head">
+                    <div class="page-head__inner page-head-content _container">
+                        <h1 class="page-head-content__title">
+                            {% block page_section_head %}
+                            Название страницы
+                            {% endblock %}
+                        </h1>
+                    </div>
+                </section>
+                {% endif %}
+                <!-- / end of page heading -->
+
+                {% block body_content %}
+                {% endblock %}
+
+            </main>
+            <!-- / end of main -->
+
+        </div>
+        <!-- / end of content -->
+
+
+        {% include 'majestic/components/footer.html' %}
+        <!-- / end of footer -->
+
+    </div>
+    <!-- / end of wrapper -->
+
+
+
+    {% block scripts %}
+    {% endblock %}
+    <!-- end of scripts -->
+
+</body>
+</html>

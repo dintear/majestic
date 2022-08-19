@@ -1,0 +1,420 @@
+// === Import technical styles (begin) === //
+
+@import 'core/mixins';
+@import 'core/variables';
+
+// === Import technical styles (end) === //
+
+
+
+
+// === Main layout (begin) === //
+
+// Contacts
+.contacts {
+    &__inner {
+        width: 100%;
+    }
+}
+
+
+// Feedback
+.feedback-content {
+    &__title {
+        margin-bottom: 8px;
+    }
+}
+
+// === Main layout (end) === //
+
+
+
+
+// === Contacts (begin) === //
+
+// Contacts layout
+.contacts {
+    margin-top: 8px;
+    margin-bottom: 36px;
+}
+
+
+// Contacts info layout
+.contacts-info {
+    @include flexGrid(center, flex-start, row);
+}
+
+
+// Contacts info icon
+.contacts-info {
+    &__icon {
+        height: 48px;
+        width: 48px;
+
+        margin-right: 16px;
+    }
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}
+
+.contacts-info-description {
+    &__title {
+        color: $headingColor;
+        font-weight: 500;
+        @include adaptiveFontSize(16, 14);
+    }
+    &__text {
+        color: $textColor;
+        font-weight: 400;
+        @include adaptiveFontSize(16, 14);
+    }
+}
+
+// === Contacts (end) === //
+
+
+
+
+// === People (begin) === //
+
+// Full name
+.manager {
+    &__fullname {
+        @include adaptiveFontSize(24, 20);
+    }
+}
+
+
+// Manager's phone number
+.manager-phone {
+    margin-top: 4px;
+    &__link {
+        transition: color $animationTime;
+
+        color: $textColor;
+        text-decoration: none;
+        @include adaptiveFontSize(20, 18);
+        &:hover {
+            color: $primaryColor;
+        }
+    }
+}
+
+
+// Layout for manager's social
+.manager-social {
+    margin-top: 12px;
+    &__link {
+        display: inline-block;
+    }
+}
+
+.manager-link {
+    &:not(:last-child) {
+        margin-right: 12px;
+    }
+    &__icon {
+        height: 32px;
+        width: 32px;
+    }
+}
+
+// === People (end) === //
+
+
+
+
+// === Message form (begin) === //
+
+// Message form layout
+.message-form {
+    margin-bottom: 64px;
+    &__additional {
+        margin-top: 16px;
+    }
+}
+
+
+// Info and textarea layout
+.message-form-general {
+    &__info {
+        @include flexGrid(flex-start, flex-start, column);
+    }
+}
+
+
+// Simple fields and textarea
+.message-form-info__field,
+.message-form-text__textarea {
+    padding: 16px 24px;
+
+    border: 1px solid $borderColor;
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}
+
+// Textarea
+.message-form-text {
+    &__textarea {
+        height: 100%;
+
+        overflow-y: auto;
+
+        resize: none;
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+    }
+}
+
+
+// Button
+.message-form-additional {
+    &__button {
+        margin-right: 12px;
+    }
+}
+
+
+// Personal data
+.message-form-personal-data {
+    display: inline-block;
+
+    max-width: 360px;
+
+    color: $textColor;
+    font-size: 13px;
+    line-height: 150%;
+    &__link {
+        color: $primaryColor;
+        text-decoration: underline;
+    }
+}
+
+// === Message form (end) === //
+
+
+
+
+// === Adaptability (begin) === //
+
+// 1248px
+@media (min-width: #{($md1 + 0.02) + px}) {
+
+    // Contacts
+    .contacts-content {
+        @include flexGrid(center, flex-start, row);
+        flex-wrap: wrap;
+        &__map {
+            flex: 0 0 480px;
+
+            margin-right: 48px;
+        }
+    }
+
+
+    // Message form layout
+    .message-form {
+        &__wrapper {
+            @include flexGrid(stretch, flex-start, row);
+        }
+        &__additional {
+            @include flexGrid(center, flex-start, row);
+        }
+    }
+
+    // Info layout
+    .message-form-general {
+        &__info {
+            margin-right: 36px;
+        }
+    }
+
+    // Simple fields
+    .message-form-info {
+        &__field {
+            width: 360px;
+        }
+    }
+
+    // Textarea
+    .message-form-text {
+        &__textarea {
+            width: 400px;
+        }
+    }
+
+}
+
+
+// 1247px
+@media (max-width: #{$md1 + px}) {
+
+    // Contacts
+    .contacts-content {
+        @include flexGrid(flex-start, flex-start, column-reverse);
+        &__map {
+            width: 100%;
+
+            margin-top: 24px;
+        }
+    }
+
+}
+
+
+// 992px, 1247px
+@media (min-width: #{($md2 + 0.02) + px}) and (max-width: #{$md1 + px}) {
+
+    // Message form layout
+    .message-form {
+        &__wrapper {
+            @include flexGrid(stretch, flex-start, row);
+        }
+        &__additional {
+            @include flexGrid(center, flex-start, row);
+        }
+    }
+
+    // Info layout
+    .message-form-general {
+        &__info {
+            margin-right: 24px;
+        }
+    }
+
+    // Simple fields and textarea
+    .message-form-info__field,
+    .message-form-text__textarea {
+        width: 320px;
+    }
+
+}
+
+
+// 468px, 991px
+@media (min-width: #{($md4 + 0.02) + px}) and (max-width: #{$md2 + px}) {
+
+    // Message form layout
+    .message-form {
+        &__wrapper {
+            @include flexGrid(stretch, flex-start, column);
+        }
+        &__additional {
+            @include flexGrid(flex-start, flex-start, column-reverse);
+        }
+    }
+
+    // Simple fields and textarea
+    .message-form-info__field,
+    .message-form-text__textarea {
+        width: 360px;
+    }
+
+    // Textarea
+    .message-form-text {
+        margin-top: 16px;
+        &__textarea {
+            height: 160px;
+        }
+    }
+
+    // Button
+    .message-form-additional {
+        &__button {
+            margin-top: 8px;
+        }
+    }
+
+}
+
+
+// 768px
+@media(min-width: #{($md3 + 0.02) + px}) {
+
+    // Layout for block 'People'
+    .people {
+        margin-bottom: 64px;
+        &__inner {
+            @include flexGrid();
+        }
+    }
+
+
+    // Manager layout
+    .manager {
+        &:first-child {
+            margin-right: 80px;
+        }
+    }
+
+}
+
+
+// 767px
+@media(max-width: #{$md3 + px}) {
+
+    // Layout for block 'People'
+    .people {
+        margin-bottom: 64px;
+        &__inner {
+            @include flexGrid(flex-start, flex-start, column);
+        }
+    }
+
+
+    // Manager layout
+    .manager {
+        &:first-child {
+            margin-bottom: 24px;
+        }
+    }
+
+}
+
+
+// 467px
+@media (max-width: #{$md4 + px}) {
+
+    // Message form layout
+    .message-form {
+        &__wrapper {
+            @include flexGrid(stretch, flex-start, column);
+        }
+        &__additional {
+            @include flexGrid(flex-start, flex-start, column-reverse);
+        }
+    }
+
+    // Info layout
+    .message-form-general {
+        &__info {
+            margin-bottom: 16px;
+        }
+    }
+
+    // Simple fields and textarea
+    .message-form-info__field,
+    .message-form-text__textarea {
+        width: 290px;
+    }
+
+    // Textarea
+    .message-form-text {
+        &__textarea {
+            height: 140px;
+        }
+    }
+
+    // Button
+    .message-form-additional {
+        &__button {
+            margin-top: 8px;
+        }
+    }
+
+}
+
+// === Adaptability (end) === //

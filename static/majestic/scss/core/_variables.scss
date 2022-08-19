@@ -1,0 +1,35 @@
+// Colors
+$headingColor: #272D38;
+$textColor: #545860;
+$lightTextColor: #E6E6EB;
+
+$primaryColor: #5E7CB3;
+$additionalColor: #A492D6;
+
+$tableBackground: #FAFAFC;
+$borderColor: #E6E6EB;
+
+// Fonts
+$primaryFont: "Ubuntu";
+$additionalFont: "Ubuntu";
+
+// Min device width
+$minWidth: 320px;
+
+// Safety padding
+$safetyPadding: 15;
+
+// Max content width
+$maxWidth: 1210 + $safetyPadding * 2;
+
+// Max width for mixins
+$maxWidthMixins: 1440;
+
+// Breakpoints
+$md1: $maxWidth + 7.98;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+// Basic animation time
+$animationTime: .3s;

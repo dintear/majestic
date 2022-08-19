@@ -1,0 +1,62 @@
+// === Common setup for buttons (begin) === //
+
+.btn {
+    display: inline-block;
+
+    cursor: pointer;
+}
+
+
+// 1248px
+@media (min-width: #{($md1 + 0.02) + px}) {
+
+    .btn {
+        padding: 16px 50px;
+    }
+
+}
+
+
+// 1247px
+@media (max-width: #{$md1 + px}) {
+
+    .btn {
+        padding: 12px 40px;
+    }
+    
+}
+
+
+// 767px
+@media (max-width: #{$md3 + px}) {
+
+    .btn {
+        padding: 12px 32px;
+    }
+    
+}
+
+// === Common setup for buttons (end) === //
+
+
+
+
+// === Primary button (begin) === //
+
+.btn {
+    &--primary {
+        transition: background-color $animationTime;
+
+        color: #FFFFFF;
+        font-weight: 400;
+        letter-spacing: 10%;
+        @include adaptiveFontSize(16, 14);
+
+        background-color: $primaryColor;
+        &:hover {
+            background-color: darken($primaryColor, 10%);
+        }
+    }
+}
+
+// === Primary button (begin) === //

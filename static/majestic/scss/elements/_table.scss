@@ -1,0 +1,78 @@
+// === Basic setup for table (begin) === //
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.table {
+    min-width: 100%;
+
+    border-spacing: 0;
+    border-collapse: collapse;
+    &__head {
+        background-color: $tableBackground;
+    }
+}
+
+// === Basic setup for table (end) === //
+
+
+
+
+// === Cell of table head (begin) === //
+
+.tb-head-row {
+    &__cell {
+        color: $headingColor;
+        font-weight: 500;
+        text-align: left;
+        @include adaptiveFontSize(16, 14);
+    }
+}
+
+// === Cell of table head (end) === //
+
+
+
+
+// ===  All cells of table (begin) === //
+
+.tb-head-row,
+.tb-body-row {
+    &__cell {
+        padding: 16px 24px;
+        // &:not(:last-child) {
+        //     border-right: 1px solid black;
+        // }
+    }
+    &__cell {
+        border: 1px solid $borderColor;
+        &:first-child {
+            border-left: 0;
+        }
+        &:last-child {
+            border-right: 0;
+        }
+    }
+}
+
+.tb-head-row {
+    &__cell {
+        border-top: 0;
+    }
+}
+
+.tb-body-row {
+    &:first-child {
+        .tb-body-row__cell {
+            border-top: 0;
+        }
+    }
+    &:last-child {
+        .tb-body-row__cell {
+            border-bottom: 0;
+        }
+    }
+}
+
+// === All cells of table (end) === //

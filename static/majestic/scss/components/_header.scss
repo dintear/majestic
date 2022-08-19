@@ -1,0 +1,233 @@
+// === Basic setup and layout for header (begin) === //
+
+.header {
+    flex: 0 0 220px;
+
+    min-height: 100vh;
+    width: 220px;
+
+    box-shadow: 0 0 32px rgba($textColor, 4%);
+
+    background-color: white;
+    &__inner {
+        position: sticky;
+        top: 0;
+
+        @include flexGrid(center, space-between, column);
+
+        height: 100vh;
+        width: 100%;
+
+        padding: 24px;
+    }
+}
+
+// === Basic setup and layout for header (end) === //
+
+
+
+
+// === Content side of header (begin) === //
+
+// Logo
+.logo {
+    display: block;
+
+    width: 172px;
+}
+
+
+// Menu layout
+.menu {
+    &__item {
+        &:not(:last-child) {
+            margin-top: 4px;
+        }
+    }
+}
+
+
+// Item of menu 
+.menu-item {
+    &__link {
+        transition: color $animationTime;
+        
+        display: inline-block;
+
+        width: 100%;
+
+        padding: 4px;
+
+        text-align: center;
+        text-decoration: none;
+        &:hover {
+            color: $primaryColor;
+        }
+    }
+}
+
+
+// Social links
+.social-link {
+    transition: opacity $animationTime;
+
+    display: inline-block;
+
+    max-width: 36px;
+
+    padding: 4px;
+    &:not(:last-child) {
+        margin-right: 4px;
+    }
+    &:hover {
+        opacity: .8;
+    }
+}
+
+
+// Additional info of header
+.header-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__text {
+        color: rgba($textColor, 80%);
+        text-align: center;
+        @include adaptiveFontSize(14, 12);
+    }
+}
+
+
+// Header contact email 
+.header-email {
+    margin-top: 4px;
+    &__link {
+        transition: color $animationTime;
+
+        color: $textColor;
+        font-weight: 500;
+        text-decoration: none;
+        @include adaptiveFontSize(16, 14);
+        &:hover {
+            color: $primaryColor;
+        }
+    }
+}
+
+// === Content side of header (end) === //
+
+
+
+
+// === Adaptability (begin) === //
+
+@media (max-height: 500px) and (max-width: #{$md3 + px}) {
+
+    // Menu button for small devices
+    .menu-btn {
+        @include flexGrid();
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        height: 48px;
+        width: 48px;
+
+        border-bottom-right-radius: 40px;
+
+        background-color: white;
+
+        z-index: 100;
+        &[is_active] {
+            .menu-btn-content__line {
+                &--top {
+                    transform: translateY(7px) rotate(45deg);
+                    transform-origin: center;
+                }
+                &--center {
+                    width: 0;
+                }
+                &--bottom {
+                    transform: translateY(-7px) rotate(-45deg);
+                    transform-origin: center;
+                }
+            }
+        }
+    }
+
+    .menu-btn-content {
+        @include flexGrid(stretch, center, column);
+
+        height: 20px;
+        width: 20px;
+
+        margin-top: 10px;
+        margin-left: 10px;
+        &__line {
+            transition: transform $animationTime;
+
+            display: inline-block;
+
+            height: 3px;
+            width: 100%;
+
+            background-color: $textColor;
+            &:not(:last-child) {
+                margin-bottom: 4px;
+            }
+            &--center {
+                transition: width $animationTime;
+            }
+        }
+    }
+
+
+    // Navigation layout
+    .header {
+        display: none;
+
+        opacity: 0;
+
+        z-index: 90;
+        &[is_active] {
+            display: block;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            height: 100vh;
+            width: 100vw;
+
+            opacity: 1;
+            .header__inner {
+                position: relative;
+
+                height: 100%;
+                width: 100%;
+
+                overflow-y: scroll;
+
+                margin: 0 auto;
+            }
+        }
+    }
+
+
+    // Header content layout
+    .header-content {
+        &__navigation {
+            margin-top: 24px;
+        }
+        &__info {
+            margin-top: 24px;
+        }
+    }
+
+}
+
+// === Adaptability (end) === //

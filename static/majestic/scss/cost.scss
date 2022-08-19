@@ -1,0 +1,74 @@
+// === Import technical styles (begin) === //
+
+@import 'core/mixins';
+@import 'core/variables';
+
+// === Import technical styles (end) === //
+
+
+
+
+// === Advantage text (begin) === //
+
+.advantage-content {
+    margin: 0;
+    &__text {
+        color: $textColor;
+        line-height: 120%;
+        font-weight: 400;
+        @include adaptiveFontSize(16, 14);
+    }
+}
+
+// === Advantage text (end) === //
+
+
+
+
+// === Cost section (begin) === //
+
+// Cost layout
+.cost {
+    margin-top: 48px;
+    &:last-child {
+        margin-bottom: 64px;
+    }
+}
+
+
+// Cost content layout
+.cost-content {
+    &__heading {
+        margin-bottom: 8px;
+
+        line-height: 120%;
+        span {
+            font-size: 80%;
+        }
+    }
+}
+
+// === Cost section (end) === //
+
+
+
+
+// === Cost description (begin) === //
+
+.cost-description {
+    margin-top: 16px;
+    &__text {
+        max-width: 640px;
+
+        color: $textColor;
+        line-height: 160%;
+        span {
+            font-weight: 500;
+        }
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+// === Cost description (end) === //

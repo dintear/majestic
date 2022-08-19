@@ -1,0 +1,380 @@
+// === Basic setup and layout for footer (begin) === //
+
+.footer {
+    background-color: $primaryColor;
+}
+
+// === Basic setup and layout for footer (end) === //
+
+
+
+
+// === Layout for top side of footer (begin) === //
+
+.footer-main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    &__lists {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}
+
+// === Layout for top side of footer (end) === //
+
+
+
+
+// === List with links (begin) === //
+
+.f-nav {
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 6px;
+        }
+    }
+}
+
+.f-nav-item {
+    &__link {
+        transition: opacity $animationTime;
+
+        display: inline-block;
+
+        position: relative;
+
+        padding: 4px 0 5px 0;
+
+        color: #FFFFFF;
+        font-weight: 400;
+        text-decoration: none;
+        &::before {
+            transition: width $animationTime;
+
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 1px;
+
+            height: 1px;
+            width: 0;
+
+            background-color: #FFFFFF;
+        }
+        &:hover {
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+    &--nested {
+        .f-nav-item__link {
+            color: $lightTextColor;
+            &::before {
+                background-color: $lightTextColor;
+            }
+        }
+    }
+}
+
+// === List with links (end) === //
+
+
+
+
+// === Contacts data (begin) === //
+
+.footer-contacts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.f-contacts-data {
+    flex: 0 0 100%;
+    &__title {
+        color: $lightTextColor;
+    }
+    &__text {
+        margin-top: 2px;
+
+        color: #FFFFFF;
+    }
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}
+
+// === Contacts data (end) === //
+
+
+
+
+// === Additional info about site (begin) === //
+
+.footer__additional {
+    margin-top: 48px;
+}
+
+.footer-info {
+    &__copyright {
+        color: #FFFFFF;
+    }
+    &__policy {
+        color: $lightTextColor;
+        
+    }
+    &__copyright,
+    &__policy {
+        @include adaptiveFontSize(14, 12);
+    }
+}
+
+.footer-policy {
+    &__link {
+        transition: color $animationTime;
+
+        display: inline-block;
+
+        padding-top: 2px;
+        padding-bottom: 2px;
+
+        text-decoration: none;
+        &:hover {
+            color: #FFFFFF;
+        }
+    }
+}
+
+.footer-tech {
+    color: $lightTextColor;
+    @include adaptiveFontSize(14, 12);
+    &__link {
+        transition: color $animationTime;
+        &:hover {
+            color: #FFFFFF;
+        }
+    }
+}
+
+// === Additional info about site (end) === //
+
+
+
+
+// === Adaptability (begin) === //
+
+// 1248px
+@media(min-width: #{($md1 + 0.02) + px}) {
+
+    // Basic setup and layout for footer
+    .footer {
+        padding: 32px 64px;
+    }
+
+
+    // Layout for top side of footer
+    .footer-main {
+        &__lists {
+            flex: 0 0 640px;
+
+            flex-direction: row;
+        }
+        &__contacts {
+            flex: 0 0 calc(100% - 700px);
+        }
+    }
+
+
+    // List with links
+    .f-nav {
+        flex: 0 0 50%;
+    }
+
+
+    // Contacts data
+    .f-contacts-data {
+        &--people {
+            flex: 0 0 auto;
+            &:not(:first-child) {
+                margin-left: 64px;
+            }
+        }
+    }
+
+
+    // Additional information about site
+    .footer-additional {
+        @include flexGrid(center, space-between);
+    }
+
+}
+
+
+// 992px, 1247px
+@media (min-width: #{($md2 + 0.02) + px}) and (max-width: #{$md1 + px}) {
+
+    // Basic setup for footer
+    .footer {
+        padding: 32px 48px;
+    }
+
+
+    // Layout for top side of footer
+    .footer-main {
+        flex-wrap: wrap;
+        &__lists {
+            flex: 0 0 520px;
+    
+            flex-direction: row;
+        }
+        &__contacts {
+            flex: 0 0 calc(100% - 560px);
+        }
+    }
+
+
+    // List with links
+    .f-nav {
+        flex: 0 0 50%;
+    }
+
+
+    // Contacts data
+    .f-contacts-data {
+        &--people {
+            flex: 0 0 auto;
+            &:not(:first-child) {
+                margin-left: 48px;
+            }
+        }
+    }
+
+
+    // Additional information about site
+    .footer-additional {
+        @include flexGrid(center, space-between);
+    }
+
+}
+
+
+// 768px, 991px
+@media (min-width: #{($md3 + 0.02) + px}) and (max-width: #{$md2 + px}) {
+
+    // Basic setup for footer
+    .footer {
+        padding: 32px 48px;
+    }
+
+
+    // Layout for top side of footer
+    .footer-main {
+        &__lists {
+            flex: 320px;
+
+            flex-direction: column;
+        }
+        &__contacts {
+            flex: 0 0 calc(100% - 320px);
+        }
+    }
+
+
+    // List with links
+    .f-nav {
+        width: 320px;
+        &:not(:first-child) {
+            margin-top: 6px;
+        }
+    }
+
+
+    // Contacts data
+    .f-contacts-data {
+        &--people {
+            flex: 0 0 auto;
+            &:not(:first-child) {
+                margin-left: 36px;
+            }
+        }
+    }
+
+
+    // Additional information about site
+    .footer-additional {
+        @include flexGrid(center, space-between);
+    }
+
+}
+
+
+// 767px
+@media (max-width: #{$md3 + px}) {
+    
+    // Layout for top side of footer
+    .footer-main {
+        flex-direction: column;
+        &__lists {
+            flex-direction: column;
+        }
+        &__contacts {
+            margin-top: 48px;
+        }
+    }
+
+
+    // List with links
+    .f-nav {
+        width: 320px;
+        &:not(:first-child) {
+            margin-top: 6px;
+        }
+    }
+
+
+    // Contacts data
+    .f-contacts-data {
+        &--people {
+            flex: 0 0 100%;
+        }
+    }
+
+
+    // Additional information about site
+    .footer-additional {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .footer-tech {
+        margin-top: 24px;
+    }
+
+}
+
+
+// 480px, 767px
+@media (min-width: #{($md4 + 0.02) + px}) and (max-width: #{$md3 + px}) {
+
+    // Basic setup and layout for footer
+    .footer {
+        padding: 24px 36px;
+    }
+
+}
+
+
+// 479px
+@media(max-width: #{$md4 + px}) {
+
+    // Basic setup for footer
+    .footer {
+        padding: 16px 24px;
+    }
+
+}
+
+// === Adaptability (end) === //

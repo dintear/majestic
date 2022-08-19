@@ -1,0 +1,155 @@
+{% extends 'majestic/base.html' %}
+{% load static %}
+
+
+
+{% block meta_tags %}
+<meta name="keywords" content="">
+<meta name="description" content="">
+{% endblock %}
+
+{% block page_name %}
+<title>Стоимость машинной вышивки — Вышивальная компания Majestic</title>
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'majestic/css/contacts.min.css' %}">
+{% endblock %}
+
+
+
+{% block page_section_head %}
+Контакты
+{% endblock %}
+
+
+{% block body_content %}
+<section class="contacts">
+    <div class="contacts__inner contacts-content _container">
+
+        <div class="contacts-content__map contacts-map">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A788e8f60e4cb6493383c8157545b4e81076018186c37c2c03ef0fc3e4e79cc78&amp;width=100%25&amp;height=280&amp;lang=ru_RU&amp;scroll=false"></script>
+        </div>
+        <!-- / end of map -->
+
+        <div class="contacts-content__data contacts-data">
+            <div class="contacts-data__item contacts-info">
+                <img src="{% static 'majestic/images/contacts/mail.png' %}" alt="" class="contacts-info__icon">
+                <div class="contacts-info__description contacts-info-description">
+                    <h5 class="contacts-info-description__title">
+                        Адрес почты
+                    </h5>
+                    <p class="contacts-info-description__text">
+                        info@majestic.ru
+                    </p>
+                </div>
+            </div>
+            <div class="contacts-data__item contacts-info">
+                <img src="{% static 'majestic/images/contacts/map-marker.png' %}" alt="" class="contacts-info__icon">
+                <div class="contacts-info__description contacts-info-description">
+                    <h5 class="contacts-info-description__title">
+                        Адрес офиса/производства
+                    </h5>
+                    <p class="contacts-info-description__text">
+                        Нижний Новгород, ул. Геологов 1Л
+                    </p>
+                </div>
+            </div>
+            <div class="contacts-data__item contacts-info">
+                <img src="{% static 'majestic/images/contacts/clock.png' %}" alt="" class="contacts-info__icon">
+                <div class="contacts-info__description contacts-info-description">
+                    <h5 class="contacts-info-description__title">
+                        Время работы
+                    </h5>
+                    <p class="contacts-info-description__text">
+                        09:00&nbsp;–&nbsp;18:00, будние&nbsp;дни
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- / end of data  -->
+
+    </div>
+</section>
+<!-- / end of contacts -->
+
+
+<section class="people">
+    <div class="people__inner people-content _container">
+
+        <div class="people-content__item manager">
+            <h3 class="manager__fullname">Хрустова Юлия</h3>
+            <p class="manager__phone manager-phone">
+                <a href="tel:89307077555" title="Позвонить" class="manager-phone__link">+7 (930) 707 75 55</a>
+            </p>
+            <p class="manager__social manager-social">
+                <a href="" class="manager-social__link manager-link">
+                    <img src="{% static 'majestic/images/social/viber.png' %}" alt="" class="manager-link__icon">
+                </a>
+                <a href="" class="manager-social__link manager-link">
+                    <img src="{% static 'majestic/images/social/wa.png' %}" alt="" class="manager-link__icon">
+                </a>
+                <a href="" class="manager-social__link manager-link">
+                    <img src="{% static 'majestic/images/social/tg.png' %}" alt="" class="manager-link__icon">
+                </a>
+            </p>
+        </div>
+        <!-- / end of first item -->
+
+        <div class="people-content__item manager">
+            <h3 class="manager__fullname">Каширина Татьяна</h3>
+            <p class="manager__phone manager-phone">
+                <a href="tel:89200363166" title="Позвонить" class="manager-phone__link">+7 (920) 036 31 66</a>
+            </p>
+            <p class="manager__social manager-social">
+                <a href="" class="manager-social__link manager-link">
+                    <img src="{% static 'majestic/images/social/viber.png' %}" alt="" class="manager-link__icon">
+                </a>
+                <a href="" class="manager-social__link manager-link">
+                    <img src="{% static 'majestic/images/social/wa.png' %}" alt="" class="manager-link__icon">
+                </a>
+                <a href="" class="manager-social__link manager-link">
+                    <img src="{% static 'majestic/images/social/tg.png' %}" alt="" class="manager-link__icon">
+                </a>
+            </p>
+        </div>
+        <!-- / end of second item -->
+
+    </div>
+</section>
+<!-- / end of managers -->
+
+
+<section class="feedback">
+    <div class="feedback__inner feedback-content _container">
+
+        <h2 class="feedback-content__title">
+            Написать нам
+        </h2>
+        <!-- / end of feedback title -->
+
+        <form method="POST" class="feedback-content__form message-form">
+            {% csrf_token %}
+            <div class="message-form__wrapper message-form-general">
+                <div class="message-form-general__info message-form-info">
+                    {{ message_form.fullname }}
+                    {{ message_form.user_phone }}
+                    {{ message_form.user_email }}
+                </div>
+                <div class="message-form-general__text message-form-text">
+                    {{ message_form.message }}
+                </div>
+            </div>
+            <div class="message-form__additional message-form-additional">
+                <button type="submit" class="message-form-additional__button btn btn--primary">Отправить</button>
+                <p class="message-form-additional__personal-data message-form-personal-data">
+                    Нажимая на&nbsp;кнопку «Отправить», Вы&nbsp;соглашаетесь на&nbsp;<a href="" class="message-form-personal-data__link">обработку своих персональных данных</a>
+                </p>
+            </div>
+        </form>
+        <!-- / end of feedback form -->
+
+    </div>
+</section>
+<!-- / end of message form -->
+{% endblock %}

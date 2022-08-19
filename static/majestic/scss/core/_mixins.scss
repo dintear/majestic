@@ -1,0 +1,54 @@
+// ===== For embedding fonts ===== //
+@mixin embeddingFont($fontName, $fileName, $weight, $style) {
+	@font-face {
+		font-family: $fontName;
+		src: url("../../fonts/#{$fileName}.woff") format("woff"),
+			url("../../fonts/#{$fileName}.woff2") format("woff2");
+		font-weight: $weight;
+		font-style: $style;
+		font-variant: normal;
+	}
+}
+
+
+
+// ===== For adaptability of font size on different screens ===== //
+@mixin adaptiveFontSize($desktopSize, $mobileSize, $type: 0) {
+	// desktopSize — max font-size
+	// mobileSize — min font-size
+	$addSize: $desktopSize - $mobileSize;
+
+	@if $type == 1 {
+		// if the screen size is smaller than $maxWidth
+		font-size: $desktopSize + px;
+		@media (max-width: #{$maxWidth + px}) {
+			font-size: calc(#{$mobileSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+		}
+	}
+	@else if $type == 2 {
+		// if the screen size is more than $maxWidth
+		font-size: $desktopSize + px;
+		@media (min-width: #{$maxWidth + px}) {
+			font-size: calc(#{$mobileSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+		}
+	}
+	@else {
+		// Always
+		font-size: calc(#{$mobileSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+	}
+}
+
+
+
+// ===== Basic settings for flex-container ===== //
+@mixin flexGrid($align: flex-start, $justify: flex-start, $direction: row, $type: false) {
+	@if $type {
+		display: inline-flex;
+	}
+	@else {
+		display: flex;
+	}
+	align-items: $align;
+	justify-content: $justify;
+	flex-direction: $direction;
+}

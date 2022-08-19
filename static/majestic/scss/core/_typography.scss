@@ -1,0 +1,82 @@
+// ===== Embedding fonts ===== //
+
+@include embeddingFont('Ubuntu', 'Ubuntu-Regular', 400, normal);
+@include embeddingFont('Ubuntu', 'Ubuntu-Medium', 500, normal);
+@include embeddingFont('Ubuntu', 'Ubuntu-Bold', 700, normal);
+
+
+
+// ===== Styles for Headings ===== //
+
+// Heading 1
+h1 {
+	color: $headingColor;
+	font-family: $primaryFont;
+	@include adaptiveFontSize(36, 28);
+}
+
+// Heading 2
+h2 {
+	color: $headingColor;
+	font-family: $primaryFont;
+	@include adaptiveFontSize(32, 24);
+}
+
+// Heading 3
+h3 {
+	color: $headingColor;
+	font-family: $primaryFont;
+	@include adaptiveFontSize(20, 18);
+}
+
+// Heading 4
+h4 {
+	color: $headingColor;
+	font-family: $primaryFont;
+	@include adaptiveFontSize(18, 16);
+}
+
+// Heading 5
+h5 {
+	color: $headingColor;
+	font-family: $primaryFont;
+	@include adaptiveFontSize(16, 14);
+}
+
+// Heading 6
+h6 {
+	color: $headingColor;
+	font-family: $primaryFont;
+	@include adaptiveFontSize(14, 12);
+}
+
+
+
+// ===== Styles for other text elements ===== //
+
+// Parent elements
+p,
+li,
+button,
+form,
+input,
+textarea,
+th,
+td {
+	color: $textColor;
+	font-family: $additionalFont;
+	@include adaptiveFontSize(16, 14);
+}
+
+// Child elements
+a,
+i,
+b,
+em,
+strong,
+mark,
+q {
+	color: inherit;
+	font: inherit;
+	line-height: inherit;
+}

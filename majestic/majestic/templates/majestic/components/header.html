@@ -1,0 +1,72 @@
+{% load static %}
+<header class="body-content__header header" id="header-nav">
+    <div class="header__inner header-content">
+
+        <a href="{% url 'majestic:homepage' %}" class="header-content__logo logo">
+            <img src="{% static 'logos/standart.png' %}" alt="" class="logo__image">
+        </a>
+        <!-- / end of logotype -->
+
+        <div class="header-content__navigation navigation">
+            <ul class="navigation__body menu">
+                <li class="menu__item menu-item">
+                    <a href="" class="menu-item__link">
+                        О&nbsp;компании
+                    </a>
+                </li>
+                <li class="menu__item menu-item">
+                    <a href="" class="menu-item__link">
+                        Наши&nbsp;услуги
+                    </a>
+                </li>
+                <li class="menu__item menu-item">
+                    <a href="{% url 'majestic:cost' %}" class="menu-item__link">
+                        Стоимость&nbsp;вышивки
+                    </a>
+                </li>
+                <li class="menu__item menu-item">
+                    <a href="" class="menu-item__link">
+                        Оплата&nbsp;и&nbsp;доставка
+                    </a>
+                </li>
+                <li class="menu__item menu-item">
+                    <a href="{% url 'majestic:contacts' %}" class="menu-item__link">
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- / end of navigation -->
+
+        <div class="header-content__info header-info">
+
+            <div class="header-info__social social">
+                <a href="" class="social__link social-link">
+                    <img src="{% static 'majestic/images/social/viber.png' %}" title="Viber, Хрустова Юлия" alt="" class="social-link__image">
+                </a>
+                <a href="" class="social__link social-link">
+                    <img src="{% static 'majestic/images/social/wa.png' %}" title="WhatsApp, Хрустова Юлия" alt="" class="social-link__image">
+                </a>
+                <a href="" class="social__link social-link">
+                    <img src="{% static 'majestic/images/social/tg.png' %}" title="telegram, Хрустова Юлия" alt="" class="social-link__image">
+                </a>
+            </div>
+            <!-- / end of social -->
+
+            <p class="header-info__text header-text">
+                Машинная вышивка<br>любой сложности
+            </p>
+            <!-- / end of header text -->
+
+            <p class="header-info__email header-email">
+                <a href="mailto:info@majestic.ru" class="header-email__link">
+                    info@majestic.ru
+                </a>
+            </p>
+            <!-- / end of contact email -->
+
+        </div>
+        <!-- / end of info -->
+
+    </div>
+</header>
