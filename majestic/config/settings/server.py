@@ -24,12 +24,10 @@ WSGI_APPLICATION = env.get('DJANGO_WSGI_APPLICATION', 'config.wsgi.application')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 STATIC_URL = '/static/'
-if DEBUG:
-    STATICFILES_DIRS = [
-        BASE_DIR.parent.joinpath('static'),
-    ]
-else:
-    STATIC_ROOT = env.get('DJANGO_STATIC_ROOT', BASE_DIR.parent.joinpath('static'))
+STATICFILES_DIRS = [
+    BASE_DIR / 'majestic/assets/',
+]
+STATIC_ROOT = env.get('DJANGO_STATIC_ROOT', BASE_DIR.parent.joinpath('static'))
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR.joinpath('media')

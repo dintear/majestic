@@ -30,6 +30,7 @@
 // === List with links (begin) === //
 
 .f-nav {
+    padding-left: 0;
     &__item {
         &:not(:last-child) {
             margin-bottom: 6px;

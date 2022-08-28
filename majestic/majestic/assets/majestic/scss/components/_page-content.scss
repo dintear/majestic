@@ -112,6 +112,9 @@
 
 .page-head {
     margin-top: 36px;
+    &-content__title {
+        @include adaptiveFontSize(30, 20);
+    }
 }
 
 // === Page heading (end) === //

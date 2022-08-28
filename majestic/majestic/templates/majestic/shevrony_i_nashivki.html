@@ -1,0 +1,59 @@
+{% extends 'majestic/base.html' %}
+{% load static %}
+
+
+
+{% block meta_tags %}
+<meta name="keywords" content="">
+<meta name="description" content="">
+{% endblock %}
+
+{% block page_heading %}
+<title>Шевроны и нашивки – Услуги компании Majestic</title>
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'majestic/css/service-item.min.css' %}">
+{% endblock %}
+
+
+
+{% block page_section_head %}
+Шевроны и нашивки
+{% endblock %}
+
+
+{% block body_content %}
+<section class="service-description">
+    <div class="service-description__content _container">
+        <p>Это наиболее распространенный способ нанесения корпоративной, спортивной или военной атрибутики из-за её высокой долговечности, износостойкости и привлекательного внешнего вида. Область применения шевронов велика и ограничивается лишь Вашей фантазией, можно нашить шеврон на детскую одежду, рюкзак, сумку и даже тапочки.</p>
+    </div>
+</section>
+<!-- / end of description of service -->
+
+
+<section class="service-section">
+    <div class="service-section__content _container">
+        <h3 class="service-section__heading">
+            Примеры работ
+        </h3>
+        <!-- ### Need add images -->
+    </div>
+</section>
+<!-- / end of part of service block -->
+
+
+<section class="service-section">
+    <div class="service-section__content _container">
+        <h3 class="service-section__heading">
+            Варианты крепления шевронов:
+        </h3>
+        <ul class="service-section__list">
+            <li>Пришив к изделию</li>
+            <li>Липучка (контактная лента велькро)</li>
+            <li>Термоклеевая  основа (крепится с помощью нагрева утюгом)</li>
+        </ul>
+    </div>
+</section>
+<!-- / end of part of service block -->
+{% endblock %}

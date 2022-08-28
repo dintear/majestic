@@ -1,0 +1,54 @@
+// === Import technical styles (begin) === //
+
+@import 'core/mixins';
+@import 'core/variables';
+
+// === Import technical styles (end) === //
+
+
+
+
+
+// === Service description (begin) === //
+
+.service-description {
+    &__content {
+        p {
+            max-width: 840px;
+        }
+    }
+}
+
+// === Service description (end) === //
+
+
+
+
+
+// === Service block (begin) === //
+
+.service-section {
+    max-width: 840px;
+
+    margin-top: 32px;
+    &:last-child {
+        margin-bottom: 64px;
+    }
+    ul > li {
+        list-style-type: disc;
+    }
+    ol > li {
+        list-style-type: decimal;
+    }
+    &__list {
+        padding-left: 32px;
+        li {
+            line-height: 160%;
+        }
+    }
+    &__paragraph {
+        margin-top: 16px;
+    }
+}
+
+// === Service block (end) === //

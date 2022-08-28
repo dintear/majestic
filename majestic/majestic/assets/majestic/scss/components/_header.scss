@@ -39,6 +39,7 @@
 
 // Menu layout
 .menu {
+    padding-left: 0;
     &__item {
         &:not(:last-child) {
             margin-top: 4px;
@@ -122,7 +123,7 @@
 
 // === Adaptability (begin) === //
 
-@media (max-height: 500px) or (max-width: #{$md3 + px}) {
+@media (max-height: 500px), (max-width: #{$md3 + px}) {
 
     // Menu button for small devices
     .menu-btn {

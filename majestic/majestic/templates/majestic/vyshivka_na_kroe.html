@@ -1,0 +1,83 @@
+{% extends 'majestic/base.html' %}
+{% load static %}
+
+
+
+{% block meta_tags %}
+<meta name="keywords" content="">
+<meta name="description" content="">
+{% endblock %}
+
+{% block page_heading %}
+<title>Вышивка на крое – Услуги компании Majestic</title>
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'majestic/css/service-item.min.css' %}">
+{% endblock %}
+
+
+
+{% block page_section_head %}
+Вышивка на крое
+{% endblock %}
+
+
+{% block body_content %}
+<section class="service-description">
+    <div class="service-description__content _container">
+        <p>Это универсальный и удобный способ нанести вышивку на одежду. Подобная технология чаще всего применяется при производстве сумок, обуви или одежды. В отличие от популярной сегодня фотопечати, вышитый рисунок не выгорает, не линяет, сохраняя яроксть и четкость изображения в течение нескольких лет.</p>
+    </div>
+</section>
+<!-- / end of description of service -->
+
+
+<section class="service-section">
+    <div class="service-section__content _container">
+        <h3 class="service-section__heading">
+            Примеры работ
+        </h3>
+        <!-- ### Need add images -->
+    </div>
+</section>
+<!-- / end of part of service block -->
+
+
+<section class="service-section">
+    <div class="service-section__content _container">
+        <h3 class="service-section__heading">
+            Плюсы технологии
+        </h3>
+        <ul class="service-section__list">
+            <li>Высокая скорость — достигается благодаря более удобному доступу к рабочей поверхности</li>
+            <li>Возможность создания крупных и сложных рисунков</li>
+            <li>Сведение к минимуму риска порчи готового изделия — ткань не стягивается и не деформируется</li>
+            <li>Вышивка на плотной ткани, которая используется для пошива верхней одежды, мягкой мебели и т. д.</li>
+            <li>Вышивка на мелких деталях  одежды – воротников, манжет, карманов</li>
+            <li>Брендирование или декорирование сумок, рюкзаков, бейсболок и т. д.</li>
+            <li>Вышивки изделий с подкладкой или наполнителем, например — курток, пиджаков, пальто и полупальто, подушек, кардиганов и т.д.</li>
+        </ul>
+    </div>
+</section>
+<!-- / end of part of service block -->
+
+
+<section class="service-section">
+    <div class="service-section__content _container">
+        <h3 class="service-section__heading">
+            Для вышивки на крое подходят:
+        </h3>
+        <ul class="service-section__list">
+            <li>Хлопок и сатин</li>
+            <li>Трикотаж и полиэстер</li>
+            <li>Шелк и шифон</li>
+            <li>Огнестойкие ткани</li>
+            <li>Флис, футер и кашемир</li>
+            <li>Смесовые ткани, ткани для спецодежды</li>
+            <li>Кожа, эко-кожа и джинсовая ткань</li>
+            <li>Мебельные ткани</li>
+        </ul>
+    </div>
+</section>
+<!-- / end of part of service block -->
+{% endblock %}

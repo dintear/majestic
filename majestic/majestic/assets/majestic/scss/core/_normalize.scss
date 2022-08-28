@@ -12,8 +12,6 @@
 // Removing left padding and markers of lists if there is a class
 ul[class],
 ol[class] {
-  padding-left: 0;
-
   list-style: none;
 }
 

@@ -7,6 +7,22 @@ def homepage(request):
     return render(request, 'majestic/index.html')
 
 
+def vyshivka_na_kroe(request):
+    return render(request, 'majestic/vyshivka_na_kroe.html')
+
+
+def shevrony_i_nashivki(request):
+    return render(request, 'majestic/shevrony_i_nashivki.html')
+
+
+def vyshivka_na_gotovyh_izdeliyah(request):
+    return render(request, 'majestic/vyshivka_na_gotovyh_izdeliyah.html')
+
+
+def cerkovnaya_vyshivka(request):
+    return render(request, 'majestic/cerkovnaya_vyshivka.html')
+
+
 def cost(request):
     return render(request, 'majestic/cost.html')
 

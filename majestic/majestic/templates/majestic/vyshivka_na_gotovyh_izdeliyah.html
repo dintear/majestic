@@ -1,0 +1,63 @@
+{% extends 'majestic/base.html' %}
+{% load static %}
+
+
+
+{% block meta_tags %}
+<meta name="keywords" content="">
+<meta name="description" content="">
+{% endblock %}
+
+{% block page_heading %}
+<title>Вышивка на готовых изделиях – Услуги компании Majestic</title>
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'majestic/css/service-item.min.css' %}">
+{% endblock %}
+
+
+
+{% block page_section_head %}
+Вышивка на готовых изделиях
+{% endblock %}
+
+
+{% block body_content %}
+<section class="service-description">
+    <div class="service-description__content _container">
+        <p>Вышивка на готовых изделиях популярна в современном мире, так как может выполняться на большом количестве предметов. Основное преимущество такой вышивки: вышивка логотипах на одежде, в качестве рекламного инструмента бренда.</p>
+    </div>
+</section>
+<!-- / end of description of service -->
+
+
+<section class="service-section">
+    <div class="service-section__content _container">
+        <h3 class="service-section__heading">
+            Примеры работ
+        </h3>
+        <!-- ### Need add images -->
+    </div>
+</section>
+<!-- / end of part of service block -->
+
+
+<section class="service-section">
+    <div class="service-section__content _container">
+        <h3 class="service-section__heading">
+            Варианты изделий для вышивки:
+        </h3>
+        <ul class="service-section__list">
+            <li>Футболки, рубашки, поло</li>
+            <li>Худи, толстовки, джинсы</li>
+            <li>Рабочая одежда, бейсболки</li>
+            <li>Постельное белье, пледы и покрывала</li>
+            <li>Шторы, коврики</li>
+            <li>Скатерть, полотенца, платки и салфетки</li>
+            <li>Вальтрапы, рушники, подголовники, попоны</li>
+        </ul>
+    </div>
+</section>
+<!-- / end of part of service block -->
+{% endblock %}
