@@ -195,7 +195,7 @@ q {
   }
 }
 .page-head {
-  margin-top: 36px;
+  margin-top: 48px;
 }
 .page-head-content__title {
   font-size: calc(20px + 10 * ((100vw - 320px) / 920));
@@ -284,7 +284,7 @@ q {
   color: #5E7CB3;
 }
 
-@media (max-height: 500px), (max-width: 767.98px) {
+@media screen and (max-height: 500px), screen and (max-width: 767.98px) {
   .menu-btn {
     display: flex;
     align-items: flex-start;
