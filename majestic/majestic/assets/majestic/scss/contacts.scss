@@ -201,7 +201,7 @@
 // === Adaptability (begin) === //
 
 // 1248px
-@media (min-width: #{($md1 + 0.02) + px}) {
+@media screen and (min-width: #{($md1 + 0.02) + px}) {
 
     // Contacts
     .contacts-content {
@@ -250,7 +250,7 @@
 
 
 // 1247px
-@media (max-width: #{$md1 + px}) {
+@media screen and (max-width: #{$md1 + px}) {
 
     // Contacts
     .contacts-content {
@@ -266,7 +266,7 @@
 
 
 // 992px, 1247px
-@media (min-width: #{($md2 + 0.02) + px}) and (max-width: #{$md1 + px}) {
+@media screen and (min-width: #{($md2 + 0.02) + px}) and (max-width: #{$md1 + px}) {
 
     // Message form layout
     .message-form {
@@ -295,7 +295,7 @@
 
 
 // 468px, 991px
-@media (min-width: #{($md4 + 0.02) + px}) and (max-width: #{$md2 + px}) {
+@media screen and (min-width: #{($md4 + 0.02) + px}) and (max-width: #{$md2 + px}) {
 
     // Message form layout
     .message-form {
@@ -332,7 +332,7 @@
 
 
 // 768px
-@media(min-width: #{($md3 + 0.02) + px}) {
+@media screen and (min-width: #{($md3 + 0.02) + px}) {
 
     // Layout for block 'People'
     .people {
@@ -354,7 +354,7 @@
 
 
 // 767px
-@media(max-width: #{$md3 + px}) {
+@media screen and (max-width: #{$md3 + px}) {
 
     // Layout for block 'People'
     .people {
@@ -376,7 +376,7 @@
 
 
 // 467px
-@media (max-width: #{$md4 + px}) {
+@media screen and (max-width: #{$md4 + px}) {
 
     // Message form layout
     .message-form {
