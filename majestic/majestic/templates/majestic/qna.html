@@ -1,0 +1,73 @@
+{% extends 'majestic/base.html' %}
+{% load static %}
+
+
+
+{% block meta_tags %}
+<meta name="keywords" content="">
+<meta name="description" content="">
+{% endblock %}
+
+{% block page_heading %}
+<title>Вопросы и ответы — Вышивальная компания Majestic</title>
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'majestic/css/qna.min.css' %}">
+{% endblock %}
+
+
+
+{% block page_section_head %}
+Ответы на часто задаваемые вопросы
+{% endblock %}
+
+
+{% block body_content %}
+<section class="qna-list">
+    <div class="qna-list__content qna-content _container">
+
+        <div class="qna-content__header qna-header">
+            <h3 class="qna-header__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h3>
+            <svg class="qna-header__arrow" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 12L12 2L2 12" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>                
+        </div>
+        <div class="qna-content__description qna-description">
+            <p class="qna-description__paragraph">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+            </p>
+        </div>
+        <!-- / item of QnA list -->
+
+        <div class="qna-content__header qna-header">
+            <h3 class="qna-header__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h3>
+            <svg class="qna-header__arrow" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 12L12 2L2 12" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>                
+        </div>
+        <div class="qna-content__description qna-description">
+            <p class="qna-description__paragraph">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+            </p>
+        </div>
+        <!-- / item of QnA list -->
+
+    </div>
+</section>
+{% endblock %}
+
+
+{% block page_scripts %}
+<script type="text/javascript">
+let accordion = document.getElementsByClassName("qna-content__header");
+let i;
+
+for (i = 0; i < accordion.length; i++) {
+    accordion[i].addEventListener("click", function() {
+        this.classList.toggle("_active");
+        this.nextElementSibling.classList.toggle("_active");
+    });
+}
+</script>
+{% endblock %}

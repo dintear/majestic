@@ -1,0 +1,108 @@
+// === Import technical styles (begin) === //
+
+@import 'core/mixins';
+@import 'core/variables';
+
+// === Import technical styles (end) === //
+
+
+
+
+// === Basic styles for QnA list (begin) === //
+
+.qna-list {
+    padding-bottom: 48px;
+}
+
+// === Basic styles for QnA list (end) === //
+
+
+
+
+// === Styles for header of QnA list items (begin) === //
+
+.qna-header {
+    @include flexGrid(center, space-between, row);
+
+    transition: border-color $animationTime;
+
+    width: 100%;
+
+    padding: 16px 24px;
+
+    border: 1px solid $borderColor;
+
+    cursor: pointer;
+    &__title {
+        padding-right: 24px;
+
+        font-weight: 500;
+        @include adaptiveFontSize(18, 16);
+    }
+    &__arrow {
+        transition: transform $animationTime;
+
+        transform: rotate(180deg);
+
+        width: 24px;
+        path {
+            transition: stroke $animationTime;
+
+            stroke: $textColor;
+        }
+    }
+    &:first-child {
+        margin-top: 16px;
+    }
+    &:hover {
+        border-color: $primaryColor;
+        .qna-header__arrow {
+            path {
+                stroke: $primaryColor;
+            }
+        }
+    }
+    &._active {
+        .qna-header__arrow {
+            transform: rotate(0);
+        }
+    }
+}
+
+// === Styles for header of QnA list items (end) === //
+
+
+
+
+// === Styles for description of QnA list items (begin) === //
+
+.qna-description {
+    transition: max-height $animationTime * 1.4,
+                padding $animationTime * 2;
+
+    max-height: 0;
+    width: 100%;
+
+    padding-left: 24px;
+    padding-right: 24px;
+
+    overflow: hidden;
+    &__paragraph {
+        font-weight: 400;
+        @include adaptiveFontSize(16, 14);
+    }
+    &._active {
+        max-height: 640px;
+
+        padding-top: 16px;
+        padding-bottom: 24px;
+
+        border-top: none;
+        border: 1px solid $borderColor;
+    }
+    &:nth-child(n + 1) {
+        margin-bottom: 16px;
+    }
+}
+
+// === Styles for description of QnA list items (begin) === //

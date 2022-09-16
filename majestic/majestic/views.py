@@ -7,6 +7,10 @@ def homepage(request):
     return render(request, 'majestic/index.html')
 
 
+def about(request):
+    return render(request, 'majestic/about.html')
+
+
 def vyshivka_na_kroe(request):
     return render(request, 'majestic/vyshivka_na_kroe.html')
 
@@ -42,3 +46,7 @@ def contacts(request):
     }
     
     return render(request, 'majestic/contacts.html', context)
+
+
+def qna(request):
+    return render(request, 'majestic/qna.html')
