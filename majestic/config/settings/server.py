@@ -31,3 +31,7 @@ STATIC_ROOT = env.get('DJANGO_STATIC_ROOT', BASE_DIR.parent.joinpath('static'))
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR.joinpath('media')
+
+
+# Sitemap file
+INSTALLED_APPS += ['django.contrib.sitemaps']

@@ -441,22 +441,25 @@ q {
 .footer-info__copyright {
   color: #FFFFFF;
 }
-.footer-info__policy {
+.footer-info__links {
   color: #E6E6EB;
 }
-.footer-info__copyright, .footer-info__policy {
+.footer-info__copyright, .footer-info__links {
   font-size: calc(12px + 2 * ((100vw - 320px) / 920));
 }
 
-.footer-policy__link {
+.footer-links__item {
   transition: color 0.3s;
   display: inline-block;
   padding-top: 2px;
   padding-bottom: 2px;
   text-decoration: none;
 }
-.footer-policy__link:hover {
+.footer-links__item:hover {
   color: #FFFFFF;
+}
+.footer-links__item:not(:last-child) {
+  margin-right: 24px;
 }
 
 .footer-tech {

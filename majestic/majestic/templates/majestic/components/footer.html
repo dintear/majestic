@@ -62,11 +62,6 @@
                         Церковная&nbsp;вышивка
                     </a>
                 </li>
-                <li class="f-nav__item f-nav-item">
-                    <a href="" class="f-nav-item__link">
-                        Карта&nbsp;сайта
-                    </a>
-                </li>
             </ul>
         </nav>
         <!-- / end of footer lists -->
@@ -97,9 +92,12 @@
     <div class="footer__additional footer-additional">
         <div class="footer-additional__info footer-info">
             <p class="footer-info__copyright">&copy; 2022. Вышивальная компания&nbsp;MAJESTIC</p>
-            <p class="footer-info__policy footer-policy">
-                <a href="" class="footer-policy__link">
+            <p class="footer-info__links footer-links">
+                <a href="" class="footer-links__item">
                     Политика конфиденциальности
+                </a>
+                <a href="{% url 'sitemap-xml' %}" class="footer-links__item">
+                    Карта сайта
                 </a>
             </p>
         </div>

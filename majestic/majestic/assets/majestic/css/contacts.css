@@ -125,7 +125,7 @@
     align-items: center;
     justify-content: flex-start;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
   .contacts-content__map {
     flex: 0 0 480px;

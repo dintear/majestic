@@ -206,7 +206,7 @@
     // Contacts
     .contacts-content {
         @include flexGrid(center, flex-start, row);
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         &__map {
             flex: 0 0 480px;
 

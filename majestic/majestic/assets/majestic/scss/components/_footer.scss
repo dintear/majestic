@@ -123,18 +123,18 @@
     &__copyright {
         color: #FFFFFF;
     }
-    &__policy {
+    &__links {
         color: $lightTextColor;
         
     }
     &__copyright,
-    &__policy {
+    &__links {
         @include adaptiveFontSize(14, 12);
     }
 }
 
-.footer-policy {
-    &__link {
+.footer-links {
+    &__item {
         transition: color $animationTime;
 
         display: inline-block;
@@ -145,6 +145,9 @@
         text-decoration: none;
         &:hover {
             color: #FFFFFF;
+        }
+        &:not(:last-child) {
+            margin-right: 24px;
         }
     }
 }
